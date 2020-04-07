@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "bingo-mario": {
+    "virtual-bingo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bingo-mario",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bingo-mario:build"
+            "browserTarget": "virtual-bingo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bingo-mario:build:production"
+              "browserTarget": "virtual-bingo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bingo-mario:build"
+            "browserTarget": "virtual-bingo:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bingo-mario:serve"
+            "devServerTarget": "virtual-bingo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bingo-mario:serve:production"
+              "devServerTarget": "virtual-bingo:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "bingo-mario"
+  "defaultProject": "virtual-bingo"
 }
