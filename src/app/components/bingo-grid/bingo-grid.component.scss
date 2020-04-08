@@ -1,0 +1,17 @@
+@import '../../../variables';
+
+.bingo-grid {
+    .side-pane {
+        position: relative;
+
+        ::ng-deep .current-number-tile {
+            
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                left: 10%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

@@ -10,6 +10,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class BingoService {
 
+    constructor(private storageService: StorageService) {}
+
     private state: GameState;
 
     public get gameIsFinished(): boolean {
@@ -29,8 +31,7 @@ export class BingoService {
     }
 
     public eventGameEnded = new Subject<boolean>();
-
-    constructor(private storageService: StorageService) { }
+    public eventCurrentNumberChanged = new Subject<BingoNumber>();
 
     public initializeGame(reset: boolean = false): void {
 
@@ -51,6 +52,7 @@ export class BingoService {
             };
             this.save();
         }
+        this.eventCurrentNumberChanged.next(this.state.currentNumber);
     }
 
     public getNext(): BingoNumber {
@@ -63,6 +65,7 @@ export class BingoService {
             this.state.currentNumber = null;
         }
         this.save();
+        this.eventCurrentNumberChanged.next(this.state.currentNumber);
         return this.state.currentNumber;
     }
 

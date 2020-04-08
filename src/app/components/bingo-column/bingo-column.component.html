@@ -1,0 +1,10 @@
+<div class="card bingo-column">
+    <div class="card-header text-center">
+        {{column.letter}}
+    </div>
+    <div class="card-body">
+        <div class="col" *ngFor="let num of column.numbers">
+            <app-bingo-number-tile [bingoNumber]="num"></app-bingo-number-tile>
+        </div>
+    </div>
+</div>

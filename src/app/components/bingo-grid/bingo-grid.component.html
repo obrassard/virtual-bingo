@@ -1,4 +1,18 @@
-<p>bingo-grid works!</p>
-
-<p *ngIf="bingoService.currentNumber">{{bingoService.currentNumber.toString()}}</p>
-<button (click)="getNextNumber()">next</button>
+<div class="container-fluid px-0 bingo-grid">
+    <div class="row">
+        <div class="col-md-2 side-pane text-center">
+            <app-current-number-tile></app-current-number-tile>
+            <button class="btn btn-block btn-primary m-5" (click)="getNextNumber()">next</button>
+            
+        </div>
+        <div class="col-md-10 grid">
+            <div class="row no-gutters justify-content-end">
+                <ng-container *ngFor="let col of this.bingoService.grid.getColumns(); let i = index">
+                    <div class="col-md-2  bingo-row-{{i+1}}">
+                        <app-bingo-column [column]="col"></app-bingo-column>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

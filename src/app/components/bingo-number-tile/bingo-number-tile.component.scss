@@ -1,0 +1,41 @@
+.number-tile {
+    margin-bottom: 5px;
+    
+    .row {
+        margin-bottom: 2px;
+    }
+
+    &_label, &_icon {
+        padding: 14px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    &_label {
+        border-radius: 0.8rem 0 0 0.8rem;
+        border-right: none;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        background: rgb(235, 235, 235);
+    }
+
+    &_icon {
+        border-radius: 0 0.8rem 0.8rem 0;
+        position: relative;
+        &_circle {
+            color:grey;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top:50%;
+            transform: translateY(-50%);
+            font-size: 35px;
+
+            &.active {
+                color: greenyellow;
+            }
+        }
+    }
+
+
+}
