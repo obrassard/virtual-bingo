@@ -3,6 +3,7 @@ export class BingoNumber {
 
     public drawned: boolean;
     public column: string;
+    public columnId: number;
 
     constructor(column: BingoColumn, public num: number) {
         this.drawned = false;

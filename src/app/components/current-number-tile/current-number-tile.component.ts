@@ -12,20 +12,23 @@ export class CurrentNumberTileComponent implements OnInit, OnDestroy {
 
     private numberChangedSubscription: Subscription;
     public currentNumber: string;
+    public colId: number;
 
     constructor(public bingoService: BingoService) { }
 
     ngOnInit(): void {
         this.currentNumber = '--';
-        this.onNumberChange(this.bingoService.currentNumber)
+        this.onNumberChange(this.bingoService.currentNumber);
         this.numberChangedSubscription = this.bingoService.eventCurrentNumberChanged.subscribe(this.onNumberChange);
     }
 
     onNumberChange = (value: BingoNumber) => {
         if (value) {
             this.currentNumber = value.toString();
+            this.colId = value.columnId;
         } else {
             this.currentNumber = '--';
+            this.colId = undefined;
         }
     }
 

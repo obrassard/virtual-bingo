@@ -14,11 +14,12 @@ export class BingoNumberGrid {
     public initialize(): BingoNumberGrid {
         this.columns = [];
         let current = 0;
-        BingoNumberGrid.COLUMNS.forEach(col => {
+        BingoNumberGrid.COLUMNS.forEach((col, index) => {
             const column = new BingoColumn(col);
             for (let i = 0; i < 15; i++) {
                 current++;
                 const bingoNumber = new BingoNumber(column, current);
+                bingoNumber.columnId = index + 1;
                 column.addNumber(bingoNumber);
             }
             this.columns.push(column);
