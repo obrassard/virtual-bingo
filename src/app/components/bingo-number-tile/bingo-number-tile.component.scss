@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .number-tile {
     margin-bottom: 5px;
     
@@ -16,12 +18,13 @@
         border-right: none;
         font-family: 'Rubik', sans-serif;
         font-weight: 500;
-        background: rgb(235, 235, 235);
+        color:white;
     }
 
     &_icon {
         border-radius: 0 0.8rem 0.8rem 0;
         position: relative;
+
         &_circle {
             color:grey;
             position: absolute;
@@ -35,7 +38,75 @@
                 color: greenyellow;
             }
         }
+
+        :host-context(.bingo-col-1) {
+            background-color: $red;
+            .number-tile_icon_circle {
+                color: $red-darker;
+                &.active {
+                    color: white;
+                }
+            }
+
+            .number-tile_label, .number-tile_icon {
+                border-color: $red-darker;
+            }
+        }
+
+        :host-context(.bingo-col-2) {
+            background-color: $blue;
+            .number-tile_icon_circle {
+                color: $blue-darker;
+                &.active {
+                    color: white;
+                }
+            }
+
+            .number-tile_label, .number-tile_icon {
+                border-color: $blue-darker;
+            }
+        }
+
+        :host-context(.bingo-col-3) {
+            background-color: $green;
+            .number-tile_icon_circle {
+                color: $green-darker;
+                &.active {
+                    color: white;
+                }
+            }
+
+            .number-tile_label, .number-tile_icon {
+                border-color: $green-darker;
+            }
+        }
+
+        :host-context(.bingo-col-4) {
+            background-color: $yellow;
+            .number-tile_icon_circle {
+                color: $yellow-darker;
+                &.active {
+                    color: white;
+                }
+            }
+
+            .number-tile_label, .number-tile_icon {
+                border-color: $yellow-darker;
+            }
+        }
+
+        :host-context(.bingo-col-5) {
+            background-color: $purple;
+            .number-tile_icon_circle {
+                color: $purple-darker;
+                &.active {
+                    color: white;
+                }
+            }
+
+            .number-tile_label, .number-tile_icon {
+                border-color: $purple-darker;
+            }
+        }
     }
-
-
 }

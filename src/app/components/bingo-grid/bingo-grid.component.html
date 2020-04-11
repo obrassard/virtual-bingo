@@ -8,7 +8,7 @@
         <div class="col-md-10 grid">
             <div class="row no-gutters justify-content-end">
                 <ng-container *ngFor="let col of this.bingoService.grid.getColumns(); let i = index">
-                    <div class="col-md-2  bingo-row-{{i+1}}">
+                    <div class="col-md-2  bingo-col-{{i+1}}">
                         <app-bingo-column [column]="col"></app-bingo-column>
                     </div>
                 </ng-container>

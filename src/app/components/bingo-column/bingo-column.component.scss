@@ -1,4 +1,9 @@
+@import '../../../variables';
+
 .bingo-column {
+
+    border: none;
+
     .card-body {
         padding: 0.5rem;
     }
@@ -8,5 +13,65 @@
         font-size: 28px;
         padding: 5px;
         font-family: 'Bungee', cursive;
+        color:white;
+    }
+
+    .card {
+        border: none;
+    }
+
+    :host-context(.bingo-col-1) {
+
+        .card-body {
+            background: $red;
+        }
+    
+        .card-header {
+            background: $red-dark;
+        }
+    }
+
+    :host-context(.bingo-col-2) {
+
+        .card-body {
+            background: $blue;
+        }
+    
+        .card-header {
+            background: $blue-dark;
+        }
+    }
+
+    :host-context(.bingo-col-3) {
+        
+        .card-body {
+            background: $green;
+        }
+    
+        .card-header {
+            background: $green-dark;
+        }
+    }
+
+    :host-context(.bingo-col-4) {
+
+        .card-body {
+            background: $yellow;
+        }
+    
+        .card-header {
+            background: $yellow-dark;
+        }
+    }
+
+    :host-context(.bingo-col-5) {
+
+        .card-body {
+            background: $purple;
+        }
+    
+        .card-header {
+            background: $purple-dark;
+        }
     }
 }
