@@ -3,7 +3,7 @@ import { BingoColumn } from './bingoColumn.entity';
 
 export class BingoNumberGrid {
 
-    public static COLUMNS: string[] = ['M', 'A', 'R', 'I', 'O'];
+    public static COLUMNS: string[] = ['B', 'I', 'N', 'G', 'O'];
 
     private columns: BingoColumn[];
 

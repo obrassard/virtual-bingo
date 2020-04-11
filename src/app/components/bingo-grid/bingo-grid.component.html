@@ -1,8 +1,17 @@
 <div class="container-fluid px-0 bingo-grid">
     <div class="row">
-        <div class="col-md-2 side-pane text-center">
+        <div class="col-md-2 side-pane">
+            <button class="btn btn-danger m-3 reset" (click)="resetGame()">
+                <i class="fas fa-redo-alt"></i>
+                <span class="ml-3 btn-text">Recommencer</span>
+            </button>
             <app-current-number-tile></app-current-number-tile>
-            <button class="btn btn-block btn-primary m-5" (click)="getNextNumber()">next</button>
+            <div class="button-wrapper px-3">
+                <button class="btn btn-primary btn-block p-3 next" (click)="getNextNumber()">
+                    Piger un numéro<i class="fas fa-hand-paper ml-3"></i>
+                </button>
+            </div>
+           
             
         </div>
         <div class="col-md-10 grid">
@@ -16,3 +25,4 @@
         </div>
     </div>
 </div>
+<app-current-number-fullscreen></app-current-number-fullscreen>

@@ -1,0 +1,53 @@
+@import '../../../variables';
+.fullscreen-overlay{
+    background-color: black;
+    display: none;
+    opacity: 0;
+    font-family: 'Rubik';
+    color:white;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    transition: all 400ms ease-in-out;
+    z-index: 2;
+
+    &.displayed {
+        opacity: 1;
+    }
+
+    .number-tile {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+        left: 0;
+
+        &_title {
+            font-size: 5vw;
+        }
+
+        &_number {
+            font-size: 20vw;
+        }
+    }
+
+    &.bingo-col{
+        &-1 {
+            background-color: $red;
+        }
+        &-2 {
+            background-color: $blue;
+        }
+        &-3 {
+            background-color: $green;
+        }
+        &-4 {
+            background-color: $yellow;
+        }
+        &-5 {
+            background-color: $purple;
+        }
+    }
+}
