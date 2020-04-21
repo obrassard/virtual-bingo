@@ -31,11 +31,11 @@ export class BingoGridComponent implements OnInit, OnDestroy {
 
     resetGame() {
         Swal.fire({
-            title: 'Recommencer la partie ?',
-            text: 'Êtes-vous certain de vouloir recommencer cette partie, tous les numéros seront perdus !',
+            title: 'Restart the game ?',
+            text: 'Are you sure you want to restart the game ? All the numbers that were drawn will be lost!',
             icon: 'question',
-            confirmButtonText: 'Oui',
-            cancelButtonText: 'Non',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
             showCancelButton: true,
             cancelButtonColor : '#ec2c36'
         }).then((result: SweetAlertResult) => {
@@ -47,8 +47,8 @@ export class BingoGridComponent implements OnInit, OnDestroy {
 
     onGameFinished() {
         Swal.fire({
-            title: 'La partie est terminée !',
-            confirmButtonText: 'Nouvelle partie',
+            title: 'Game\'s over!',
+            confirmButtonText: 'New Game',
             confirmButtonColor: '#34bc64',
             allowEscapeKey: false,
             allowOutsideClick: false
